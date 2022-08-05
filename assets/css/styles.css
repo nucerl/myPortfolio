@@ -515,16 +515,19 @@ img {
   background-color: var(--first-color);
 }
 
-.skills__relp5{
+.skills__sys-code{
   width: 100%;
 }
 
-.skills__notion{
-  width: 60%;
+.skills__80{
+  width: 80%;
 }
 
-.skills__gantt{
-  width: 20%;
+.skills__60{
+  width: 60%;
+}
+.skills__40{
+  width: 40%;
 }
 
 .skills__close .skills__list{
@@ -581,6 +584,11 @@ img {
   font-size: var(--small-font-size);
   margin-bottom: var(--mb-1);
 }
+.qualification__degree{
+  display: inline-block;
+  font-size: var(--smaller-font-size);
+  margin-bottom: var(--mb-0);
+}
 
 .qualification__calendar{
   font-size: var(--smaller-font-size);
@@ -618,13 +626,13 @@ img {
   color: var(--first-color);
 }
 
-/*==================== SERVICES ====================*/
-.services__container{
+/*==================== PROJECTS ====================*/
+.projects__container{
   gap: 1.5rem;
   grid-template-columns: repeat(2, 1fr);
 }
 
-.services__content{
+.projects__content{
   position: relative;
   background-color: var(--container-color);
   padding: 3.5rem .5rem 1.25rem 1.5rem;
@@ -633,33 +641,33 @@ img {
   transition: .3s;
 }
 
-.services__content:hover{
+.projects__content:hover{
   box-shadow: 0 4px 8px rgba(0, 0, 0, .15);
 }
 
-.services__icon{
+.projects__icon{
   display: block;
   font-size: 1.5rem;
   color: var(--first-color);
   margin-bottom: var(--mb-1);
 }
 
-.services__title{
+.projects__title{
   font-size: var(--h3-font-size);
   margin-bottom: var(--mb-1);
   font-weight: var(--font-medium);
 }
 
-.services__button{
+.projects__button{
   cursor: pointer;
   font-size: var(--small-font-size);
 }
 
-.services__button:hover .button__icon{
+.projects__button:hover .button__icon{
   transform: translateX(.25rem);
 }
 
-.services__modal{
+.projects__modal{
   position: fixed;
   top: 0;
   left: 0;
@@ -676,7 +684,7 @@ img {
   transition: .3s;
 }
 
-.services__modal-content{
+.projects__modal-content{
   position: relative;
   background-color: var(--container-color);
   padding: 1.5rem;
@@ -684,30 +692,35 @@ img {
 
 }
 
-.services__modal-services{
+.projects__modal-projects{
   row-gap: 1rem;
 }
 
-.services__modal-service{
+.projects__modal-project{
   display: flex;
 }
 
-.services__modal-title{
+.projects__modal-project-ind{
+  display: flex;
+  padding-left: 5%;
+}
+
+.projects__modal-title{
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
   margin-bottom: var(--mb-1-5);
 }
 
-.services__modal-close{
+.projects__modal-close{
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 0.5rem;
+  right: 0.5rem;
   font-size: 1.5rem;
   color: var(--first-color);
   cursor: pointer;
 }
 
-.services__modal-icon{
+.projects__modal-icon{
   color: var(--first-color);
   margin-right: var(--mb-0-25);
 }
@@ -1035,16 +1048,16 @@ img {
     gap: .5rem;
   }
 
-  .services__container{
+  .projects__container{
     grid-template-columns: max-content;
     justify-content: center;
   }
 
-  .services__content{
+  .projects__content{
     padding-right: 3.5rem;
   }
 
-  .services__modal{
+  .projects__modal{
     padding: 0 .5rem;
   }
 
@@ -1206,20 +1219,20 @@ img {
     grid-template-columns: .5fr;
   }
 
-  .services__container{
+  .projects__container{
     grid-template-columns: repeat(3, 218px);
     justify-content: center;
   }
 
-  .services__icon{
+  .projects__icon{
     font-size: 2rem;
   }
 
-  .services__content{
+  .projects__content{
     padding: 6rem 0 2rem 2.5rem;
   }
 
-  .services__modal-content{
+  .projects__modal-content{
     width: 450px;
   }
 
@@ -1290,7 +1303,7 @@ img {
     transform: translateX(-6rem);
   }
 
-  .services__container{
+  .projects__container{
     grid-template-columns: repeat(3, 238px);
   }
   
