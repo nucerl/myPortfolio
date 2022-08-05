@@ -71,7 +71,7 @@
 
 /*========== Variables Dark theme ==========*/
 body.dark-theme{
-  --first-color-second: hsl(var(--hue-color), 30%, 8%);
+  --first-color-second: hsl(var(--hue-color), 29%, 16%);
   --title-color: hsl(var(--hue-color), 8%, 95%);
   --text-color: hsl(var(--hue-color), 8%, 75%);
   --input-color: hsl(var(--hue-color), 29%, 16%);
@@ -732,30 +732,30 @@ img {
 }
 
 /*==================== PORTFOLIO ====================*/
-.portfolio__container{
+.paper__container{
   overflow: initial;
 }
 
-.portfolio__content{
+.paper__content{
   padding: 0 1.5rem;
 }
 
-.portfolio__img{
+.paper__img{
   width: 265px;
   border-radius: .5rem;
   justify-self: center;
 }
 
-.portfolio__title{
+.paper__title{
   font-size: var(--h3-font-size);
   margin-bottom: var(--mb-0-5);
 }
 
-.portfolio__description{
+.paper__description{
   margin-bottom: var(--mb-0-75);
 }
 
-.portfolio__button:hover .button__icon{
+.paper__button:hover .button__icon{
   transform: translateX(.25rem);
 }
 
@@ -764,7 +764,7 @@ img {
   content: '';
 }
 
-.swiper-portfolio-icon{
+.swiper-paper-icon{
   font-size: 2rem;
   color: var(--first-color);
 }
@@ -855,6 +855,7 @@ img {
 
 
 .testimonial__description{
+  text-align: justify;
   margin-bottom: var(--mb-2-5);
 }
 
@@ -929,7 +930,7 @@ img {
 }
 
 .footer__title{
-  font-size: var(--h1-font-size);
+  font-size: var(--h2-font-size);
   margin-bottom: var(--mb-0-25);
 }
 
@@ -962,6 +963,7 @@ img {
   font-size: var(--smaller-font-size);
   text-align: center;
   color: var(--text-color-light);
+  color: #FFF;
   margin-top: var(--mb-3);
 }
 
@@ -1098,7 +1100,7 @@ img {
   
   .about__container,
   .skills__container,
-  .portfolio__content,
+  .paper__content,
   .project__container,
   .contact__container,
   .footer__container{
@@ -1236,11 +1238,11 @@ img {
     width: 450px;
   }
 
-  .portfolio__img{
+  .paper__img{
     width: 320px;
   }
 
-  .portfolio__content{
+  .paper__content{
     align-items: center;
   }
 
@@ -1307,11 +1309,11 @@ img {
     grid-template-columns: repeat(3, 238px);
   }
   
-  .portfolio__content{
+  .paper__content{
     column-gap: 5rem;
   }
 
-  .swiper-portfolio-icon{
+  .swiper-paper-icon{
     font-size: 3.5rem;
   }
 
