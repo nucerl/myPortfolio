@@ -2,4 +2,11 @@
 
 The design is based on [Bedimcode](https://github.com/bedimcode)
 
-![preview img](/preview.png)
+Full Desktop Screenshot
+![preview img](/desktop-ss.png)
+
+Full Tablet Screenshot
+![preview img](/tablet-ss.png)
+
+Full Phone Screenshot
+![preview img](/phone-ss.png)
