@@ -4,11 +4,11 @@
 - The email service provider is [EmailJs](https://www.emailjs.com/)
 - The favicon generator is [favicon.io](https://favicon.io/favicon-generator/)
 
-### Full Desktop Screenshot
+### Landing Page Light
 
-![preview img](/desktop-ss.png)
+![preview img](./assets/snaps/light.png)
 
-### Full Phone Screenshot
+### Landing Page Dark
 
-![preview img](/phone-ss.png)
+![preview img](./assets/snaps/dark.png)
 
