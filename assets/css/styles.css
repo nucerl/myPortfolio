@@ -866,6 +866,29 @@ img {
   bottom: 0;
 }
 
+/*==================== VIDEOS ====================*/
+
+.videos__content{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 0;
+  /* border: 1px dashed blue; */
+}
+
+.iframe__container {
+  max-width: 100%;
+  aspect-ratio: auto 16 / 9; 
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+}
+
+.iframe{
+  border-radius: 1rem;
+}
+
 /*==================== CONTACT ME ====================*/
 .contact__container{
   row-gap: 3rem;
@@ -1079,6 +1102,10 @@ img {
   .testimonial__data,
   .testimonial__description{
     text-align: center;
+  }
+
+  .videos__content{
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
 }
