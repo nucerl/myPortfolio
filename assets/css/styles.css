@@ -1110,6 +1110,14 @@ img {
 
 }
 
+@media screen and (max-width: 450px){
+
+  .videos__content{
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+}
+
 /* For medium devices */
 
 @media screen and (min-width: 568px){
