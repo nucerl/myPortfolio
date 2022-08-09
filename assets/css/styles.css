@@ -526,8 +526,13 @@ img {
 .skills__60{
   width: 60%;
 }
+
 .skills__40{
   width: 40%;
+}
+
+.skills__20{
+  width: 20%;
 }
 
 .skills__close .skills__list{
