@@ -843,7 +843,7 @@ img {
 .testimonial__img{
   width: 60px;
   height: 60px;
-  border-radius: 50%;
+  border-radius: .5rem;
   margin-right: var(--mb-0-75);
 }
 
