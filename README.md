@@ -7,6 +7,7 @@
 - The Open Graph Meta Tags are added [Open Graph](https://ogp.me/)
 - A video grid is added to feature Youtube embeded videos
 - Added Google Tag script for [Google Analytics](https://analytics.google.com)
+- Online meeting integration by [Zeeg](https://zeeg.me/en/)
 
 ### Landing Page Light
 
