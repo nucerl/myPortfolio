@@ -1,5 +1,5 @@
 # Erol Bicer's Responsive Portfolio Website
-## Website URL: https://www.erolbicer.com
+## Website URL: www.erolbicer.com
 
 - The design is based on [Bedimcode](https://github.com/bedimcode)
 - The email service provider is [EmailJs](https://www.emailjs.com/)
