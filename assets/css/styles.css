@@ -896,18 +896,20 @@ img {
 
 /*==================== COMPANY ====================*/
 
-.company__content{
+.presentation__content{
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   padding: 0;
+  /* margin-bottom: var(--mb-5); */
   /* border: 1px dashed blue; */
+  gap: 1rem;
 }
 
-.company__subtitle {
+.presentation__subtitle {
   text-align: center;
   display: block;
   font-size: var(--medium-font-size);
-  margin-bottom: var(--mb-.5);
+  /* margin-bottom: 1rem; */
 }
 
 /*==================== CONTACT ME ====================*/
