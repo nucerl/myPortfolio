@@ -860,7 +860,7 @@ img {
 
 .testimonial__description{
   text-align: justify;
-  /* margin-bottom: var(--mb-2-5); */
+  margin-bottom: var(--mb-2-5);
 }
 
 .testimonial__icon-star{
