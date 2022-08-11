@@ -888,10 +888,27 @@ img {
   flex-direction: column; 
   justify-content: center;
   align-items: center;
+
 }
 
 .iframe{
   border-radius: 1rem;
+}
+
+/*==================== COMPANY ====================*/
+
+.company__content{
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  padding: 0;
+  /* border: 1px dashed blue; */
+}
+
+.company__subtitle {
+  text-align: center;
+  display: block;
+  font-size: var(--medium-font-size);
+  margin-bottom: var(--mb-.5);
 }
 
 /*==================== CONTACT ME ====================*/
