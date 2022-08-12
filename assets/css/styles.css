@@ -1011,9 +1011,10 @@ img {
 }
 
 .footer__links{
-  display: flex;
-  flex-direction: column;
-  row-gap: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0;
+  gap: .5rem;
 }
 
 .footer__link:hover{
@@ -1156,6 +1157,13 @@ img {
 
   .videos__content{
     grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .footer__links{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+    gap: .5rem;
   }
 
 }
