@@ -874,6 +874,11 @@ img {
 
 /*==================== VIDEOS ====================*/
 
+.videos__content-top{
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
 .videos__content{
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
