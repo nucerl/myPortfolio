@@ -822,7 +822,6 @@ img {
   color: #FFF;
 }
 
-
 .project__img{
   width: 232px;
   justify-self: center;
@@ -839,7 +838,6 @@ img {
   justify-content: space-between;
   margin-bottom: var(--mb-1);
 }
-
 
 .testimonial__img{
   width: 60px;
@@ -873,20 +871,12 @@ img {
 }
 
 
-/* .swiper-horizontal > .swiper-pagination-bullets{
-  bottom: -2.5rem;
-}
-
-.swiper-pagination-bullet-active{
-  background-color: var(--first-color);
-} */
-
-
 /*==================== VIDEOS ====================*/
 
 .videos__content-top{
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
+  margin-bottom: -.5rem;
 }
 
 .videos__content{
@@ -894,7 +884,6 @@ img {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
   /* margin-bottom: var(--mb-2-5); */
-  /* border: 1px dashed blue; */
 }
 
 .videos__subtitle {
@@ -913,7 +902,6 @@ img {
   flex-direction: column; 
   justify-content: center;
   align-items: center;
-
 }
 
 .iframe{
