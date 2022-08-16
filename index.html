@@ -21,6 +21,10 @@
             })();
         </script>
 
+        <!--==================== CALENDAR SERVICE ====================-->
+        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
         <!--==================== TITLE and Favicon ====================-->
         <title>Erol Bicer's Portfolio 👋</title>
         <!-- <link rel="shortcut icon" type="image/png" href="assets/img/"> --> 
@@ -1235,15 +1239,19 @@
             </section>
 
             <!--==================== REQUEST MEETING ====================-->
-            <section class="project section">
+            <section class="project section" id="meeting">
                 <div class="project__bg">
                     <div class="project__container container grid">
                         <div class="project__data">
-                            <h2 class="project__title">Do you have a question?</h2>
-                            <p class="project__description">Send a meeting request and lets discuss!</p>
-                            <a href="#meeting" class="button button--flex button--white">
+                            <h2 class="project__title">Do you have any questions?</h2>
+                            <p class="project__description">Schedule a meeting and lets discuss!</p>
+                            <!-- <a href="#meeting" class="button button--flex button--white">
                                 Send a Request
                                 <i class="uil uil-message project_icon button__icon"></i>
+                            </a> -->
+                            <a href="#meeting" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/erolbicer/onlinemeeting?hide_gdpr_banner=1&text_color=7c716a&primary_color=f9660b'});return false;" class="button button--flex button--white">
+                                Send a Request
+                                <i href="#meeting" class="uil uil-message project_icon button__icon"></i>
                             </a>
                         </div>
                         <img src="assets/img/perfil.png" alt="Erol Bicer" class="project__img">
@@ -1409,7 +1417,7 @@
             </section>
 
             <!--==================== ONLINE MEETING ====================-->
-            <section class="meeting section" id="meeting">
+            <!-- <section class="meeting section" id="meeting">
                 <h2 class="section__title">Online Meeting</h2>
                 <span class="section__subtitle">Send a Request</span>
 
@@ -1420,7 +1428,7 @@
                          </div>                        
                     </div>   
                  </div>
-            </section>
+            </section> -->
 
             <!--==================== CONTACT ME ====================-->
             <section class="contact section" id="contact">

@@ -861,7 +861,7 @@ img {
 
 .testimonial__description{
   text-align: justify;
-  margin-bottom: var(--mb-2-5);
+  margin-bottom: var(--mb-1-5);
 }
 
 .testimonial__icon-star{
@@ -871,6 +871,16 @@ img {
 .swiper .swiper-pagination-testimonial{
   bottom: 0;
 }
+
+
+/* .swiper-horizontal > .swiper-pagination-bullets{
+  bottom: -2.5rem;
+}
+
+.swiper-pagination-bullet-active{
+  background-color: var(--first-color);
+} */
+
 
 /*==================== VIDEOS ====================*/
 
@@ -931,7 +941,7 @@ img {
 
 /*==================== MEETING ====================*/
 
-.zeeg__container {
+/* .zeeg__container {
   max-width: 100%;
   height: 780px;
   display: flex;
@@ -943,7 +953,7 @@ img {
   .iframe-meeting{
     border-radius: 1rem;
     border: 1px solid #f1f1f1;
-  }
+  } */
 
 /*==================== CONTACT ME ====================*/
 .contact__container{
@@ -1427,17 +1437,17 @@ img {
     bottom: -4.5rem;
   }
 
+  .swiper .swiper-pagination-testimonial{
+    bottom: 0;
+  }
+
   .contact__form{
     width: 460px;
   }
 
-
-
   .contact__inputs{
     grid-template-columns: repeat(2, 1fr);
   }
-
-
 
 }
 
