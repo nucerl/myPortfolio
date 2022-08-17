@@ -127,7 +127,7 @@ let swiperTestimonial = new Swiper('.testimonial__container', {
   });
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-const sections = document.querySelectorAll('section[id]')
+const sections = document.querySelectorAll('section[data-id]')
 
 function scrollActive(){
     const scrollY = window.pageYOffset
@@ -135,7 +135,7 @@ function scrollActive(){
     sections.forEach(current =>{
         const sectionHeight = current.offsetHeight
         const sectionTop = current.offsetTop - 50;
-        sectionId = current.getAttribute('id')
+        sectionId = current.getAttribute('data-id')
 
         if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
