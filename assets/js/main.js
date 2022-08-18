@@ -244,7 +244,8 @@ function validateMessage(){
 function SendMail(){
 
     if(!validateName() || !validateEmail() || !validateMessage() ){
-        alert("Please fix the errors to send a message!");
+        // alert("Please fix the errors to send a message!");
+        swal("Sorry!", "Please fix the errors to send a message!", "warning");
         return false;
     }
 
@@ -256,6 +257,7 @@ function SendMail(){
     }
     emailjs.send("service_4ajtfo5", "template_ryff15a", params).then(function (res){
         // alert("Success! " + res.status);
-        alert("Your message has been sent successfully!");
+        // alert("Your message has been sent successfully!");
+        swal("Success!", "Your message has been sent!", "success");
     })
 }
