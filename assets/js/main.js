@@ -192,8 +192,62 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
+/*==================== CONTACT FORM VALIDATIONS ====================*/ 
+var nameError = document.getElementById('name-error');
+var emailError = document.getElementById('email-error');
+var messageError = document.getElementById('message-error');
+
+function validateName(){
+    var name = document.getElementById('fullName').value;
+
+    if(name.length == 0){
+        nameError.innerHTML = 'Full name is required!';
+        return false;
+    }
+    if(!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)){
+        nameError.innerHTML = 'Enter full name!';
+        return false;
+    }
+    nameError.innerHTML = '<i class="uil uil-check-circle projects__modal-icon"></i>';
+    return true;
+}
+
+function validateEmail(){
+    var email = document.getElementById('email_id').value;
+
+    if(email.length == 0){
+        emailError.innerHTML = 'A valid email address is required!';
+        return false;
+    }
+    if(!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+        emailError.innerHTML = 'Invalid email!';
+        return false;
+    }
+    emailError.innerHTML = '<i class="uil uil-check-circle projects__modal-icon"></i>';
+    return true;
+}
+
+function validateMessage(){
+    var message = document.getElementById('message').value;
+    var required = 30;
+    var left = required - message.length;
+
+    if (left>0){
+        messageError.innerHTML = left + ' more characters are required!';
+        return false;
+    }
+    messageError.innerHTML = '<i class="uil uil-check-circle projects__modal-icon"></i>';
+    return true;
+}
+
 /*==================== EMAIL SERVICE ====================*/ 
 function SendMail(){
+
+    if(!validateName() || !validateEmail() || !validateMessage() ){
+        alert("Please fix the errors to send a message!");
+        return false;
+    }
+
     var params = {
         from_name : document.getElementById("fullName").value,
         email_id : document.getElementById("email_id").value,
@@ -202,6 +256,6 @@ function SendMail(){
     }
     emailjs.send("service_4ajtfo5", "template_ryff15a", params).then(function (res){
         // alert("Success! " + res.status);
-        alert("Your message sent successfully!");
+        alert("Your message has been sent successfully!");
     })
 }

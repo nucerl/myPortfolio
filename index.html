@@ -1469,25 +1469,27 @@
                     <form action="" class="contact__form grid">
                         <div class="contact__inputs grid">
                             <div class="contact__content">
-                                <label for="" class="contact__label">Name</label>
-                                <input type="text" id="fullName" class="contact__input">
+                                <label for="" class="contact__label">Full Name</label>
+                                <input type="text" placeholder="Enter full name" class="contact__input" id="fullName" onkeyup="validateName()">
+                                <span id="name-error" class="contact__subtitle"></span>
                             </div>
                             <div class="contact__content">
                                 <label for="" class="contact__label">Email</label>
-                                <input type="email" id="email_id" class="contact__input">
+                                <input type="email" placeholder="Enter email address" class="contact__input" id="email_id" onkeyup="validateEmail()">
+                                <span id="email-error" class="contact__subtitle"></span>
                             </div>
                         </div>
                         <div class="contact__content">
                             <label for="" class="contact__label">Subject</label>
-                            <input type="text" id="subject" class="contact__input">
+                            <input type="text" id="subject" placeholder="Enter a subject line" class="contact__input">
                         </div>
                         <div class="contact__content">
                             <label for="" class="contact__label">Message</label>
-                            <textarea name="" id="message" cols="0" rows="7" class="contact__input"></textarea>
+                            <textarea name="" cols="0" rows="7" placeholder="Enter your message" class="contact__input" id="message" onkeyup="validateMessage()"></textarea>
+                            <span id="message-error" class="contact__subtitle"></span>
                         </div>
                         <div>
-                            <!-- <a href="#" class="button button--flex"> -->
-                            <a onclick="SendMail()" class="button button--flex">
+                            <a onclick="return SendMail()" class="button button--flex">
                             Send Message
                             <i class="uil uil-message button__icon"></i>
                         </a>
