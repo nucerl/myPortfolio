@@ -580,7 +580,7 @@ img {
 }
 
 .qualification__title{
-  font-size: var(--normal-font-size);
+  font-size: .990rem;
   font-weight: var(--font-medium);
 }
 
