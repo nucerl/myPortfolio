@@ -11,7 +11,8 @@
 - Videos are embedded from [YouTube](https://www.youtube.com)
 - Presentations are  embedded from [Beautiful.ai](https://www.beautiful.ai)
 - Added Google Tag script for [Google Analytics](https://analytics.google.com)
-- Online meeting integration by [Calendly](https://calendly.com/)
+- Online meeting integration is from [Calendly](https://calendly.com/)
+- Chatbot integration is from [Crisp](https://crisp.chat/en/)
 
 ### Landing Page Light
 
