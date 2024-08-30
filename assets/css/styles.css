@@ -418,6 +418,7 @@ img {
 .about__description{
   text-align: justify;
   margin-bottom: var(--mb-2-5);
+  margin-top: 2.65rem;
 }
 
 
