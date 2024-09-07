@@ -1,2 +1,0 @@
-RewriteEngine on
-RewriteRule ^resume resume.pdf [NC,L]
