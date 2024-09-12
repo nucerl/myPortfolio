@@ -375,6 +375,11 @@ img {
   margin-left: var(--mb-0-5);
   transition: .3s;
 }
+.button__iconsmall{
+  font-size: 1rem;
+  margin-left: var(--mb-0-5);
+  transition: .3s;
+}
 
 .button--white{
   background-color: #FFF;
@@ -738,66 +743,94 @@ img {
 }
 
 /*==================== PAPER ====================*/
-.paper__container{
-  overflow: initial;
+/* Filter Buttons */
+.filter__buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
-.paper__content{
-  padding: 0 1.5rem;
-}
-
-.paper__img{
-  width: 265px;
-  border-radius: .5rem;
-  justify-self: center;
-}
-
-.paper__title{
-  font-size: var(--h3-font-size);
-  margin-bottom: var(--mb-0-5);
-}
-
-.paper__description{
-  text-align: justify;
-  margin-bottom: var(--mb-0-75);
-}
-
-.paper__button:hover .button__icon{
-  transform: translateX(.25rem);
-}
-
-.swiper-button-prev::after,
-.swiper-button-next::after{
-  content: '';
-}
-
-.swiper-paper-icon{
-  font-size: 2rem;
-  color: var(--first-color);
-}
-
-.swiper-button-prev{
-  left: -.5rem;
-}
-
-.swiper-button-next{
-  right: -.5rem;
-}
-
-
-.swiper-horizontal > .swiper-pagination-bullets{
-  bottom: -2.5rem;
-}
-
-.swiper-pagination-bullet-active{
+.filter__btn {
+  padding: 0.75rem 1.5rem;
+  margin: 0 0.5rem;
   background-color: var(--first-color);
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.swiper-button-prev,
-.swiper-button-next,
-.swiper-pagination-bullet{
-  outline: none;
+.filter__btn:hover, .filter__btn.active {
+  background-color: var(--first-color-alt);
 }
+
+/* Papers Grid */
+.papers__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.paper__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--container-color);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+  min-height: 300px; /* Set a minimum height */
+  visibility: visible;  /* Ensures visibility is controlled */
+  position: relative;   /* Ensures the layout remains intact */
+}
+
+.hidden {
+  visibility: hidden;   /* Hides element */
+  position: absolute;   /* Removes it from the layout */
+}
+
+/* Button alignment */
+.paper__title {
+  flex-grow: 1;
+  margin-bottom: 0.5rem;
+  color: var(--title-color);
+  text-align: center;
+}
+
+.paper__button {
+  align-self: center; /* Centers the button horizontally */
+  margin-top: 1rem; /* Adjust if needed */
+}
+
+
+.paper__card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Load More Button */
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.load-more-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--first-color);
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.load-more-btn:hover {
+  background-color: var(--first-color-alt);
+}
+
 
 /*==================== PROJECT  ====================*/
 .project{

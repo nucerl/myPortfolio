@@ -262,3 +262,80 @@ function SendMail(){
         swal("Success!", "Your message has been sent!", "success");
     })
 }
+
+const filterButtons = document.querySelectorAll('.filter__btn');
+const paperCards = document.querySelectorAll('.paper__card');
+const loadMoreBtn = document.querySelector('.load-more-btn');
+let visibleCards = 6; // Initial number of visible cards per filter
+
+// Function to update the visibility of the "Load More" button
+function updateLoadMoreVisibility(filteredCards) {
+    // If there are more hidden cards, show the "Load More" button
+    const hiddenCards = filteredCards.filter(card => card.classList.contains('hidden'));
+    if (hiddenCards.length > 0) {
+        loadMoreBtn.style.display = 'block';
+    } else {
+        loadMoreBtn.style.display = 'none';
+    }
+}
+
+// Function to show/hide papers based on filter and reset visible cards
+function filterPapers(filter) {
+    let filteredCards = [];
+
+    // Show or hide cards based on the filter
+    paperCards.forEach(card => {
+        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.classList.remove('hidden'); // Show the card
+            filteredCards.push(card);
+        } else {
+            card.classList.add('hidden'); // Hide the card
+        }
+    });
+
+    // Initially hide all papers after the visible limit
+    filteredCards.forEach((card, index) => {
+        if (index >= visibleCards) {
+            card.classList.add('hidden');
+        } else {
+            card.classList.remove('hidden');
+        }
+    });
+
+    // Update "Load More" button visibility
+    updateLoadMoreVisibility(filteredCards);
+}
+
+// Set up event listeners for filter buttons
+filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        filterButtons.forEach(button => button.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+        filterPapers(filter); // Filter papers based on the clicked filter
+    });
+});
+
+// Load more papers on "Load More" button click
+loadMoreBtn.addEventListener('click', () => {
+    const activeFilter = document.querySelector('.filter__btn.active').getAttribute('data-filter');
+    const hiddenCards = [...document.querySelectorAll('.paper__card.hidden')].filter(card => activeFilter === 'all' || card.getAttribute('data-category') === activeFilter);
+    const limit = 3; // Number of papers to show per click
+
+    // Show the next batch of hidden papers
+    hiddenCards.forEach((card, index) => {
+        if (index < limit) {
+            card.classList.remove('hidden');
+        }
+    });
+
+    // Update the visibility of the "Load More" button after loading more cards
+    const filteredCards = [...paperCards].filter(card => activeFilter === 'all' || card.getAttribute('data-category') === activeFilter);
+    updateLoadMoreVisibility(filteredCards);
+});
+
+// Initialize the page to show only the first 6 papers on load
+document.addEventListener('DOMContentLoaded', () => {
+    filterPapers('all'); // Initialize with "all" filter on page load
+});
