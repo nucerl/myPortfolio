@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Circle Area Calculator</title>
+    
+        <!-- Import Google Fonts and Unicons -->
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    
+        <!-- Link to the custom CSS -->
+        <link rel="stylesheet" href="css/circle-area-calculator.css">
+        
+        <script defer src="js/circle-area-calculator.js"></script>
+    </head>
+<body>
+    <div class="calculator-container">
+        <h1>Circle Area Calculator</h1>
+        <p>Calculate the area of a circle by entering the diameter below.</p>
+        <form id="circleForm" class="calculator-form">
+            <div class="form-group">
+                <div class="spacer"></div>  <!--Adds space -->
+                <input type="number" id="diameter" name="diameter" placeholder="Enter diameter [m]" step="0.00001" required aria-label="Enter the diameter of the circle in meters">
+            </div>
+            <button type="submit" class="calculate-btn">
+                Calculate <i class="uil uil-cog button__icon"></i>
+            </button>
+        </form>
+        <div id="result" class="result-display"></div>
+        
+        <div class="signature">
+            <span>Made by <a href="https://www.erolbicer.com/" target="_blank" class="signature-link">EB</a></span>
+        </div>
+    </div>
+</body>
+</html>
