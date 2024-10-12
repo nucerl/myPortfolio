@@ -7,6 +7,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    padding: 0;  /* Add padding for smaller screens */
 }
 
 .calculator-container {
@@ -17,13 +18,14 @@ body {
     max-width: 400px;
     width: 100%;
     text-align: center;
-    color: #333; /* Text color aligned with the main site */
+    color: #333;
+    box-sizing: border-box;  /* Ensure padding is considered in width calculation */
 }
 
 h1 {
     font-size: 2em;
     margin-bottom: 15px;
-    color: #333; /* Heading color */
+    color: #333;
 }
 
 p {
@@ -34,23 +36,22 @@ p {
 
 /* Form Styling */
 .calculator-form .form-group {
-    margin-bottom: 25px; /* Add extra margin */
+    margin-bottom: 25px;
     margin-right: 26px;
 }
 
 .calculator-form input {
     width: 100%;
-    padding: 12px; 
+    padding: 12px;
     border-radius: 10px;
     border: 1px solid #ddd;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     transition: all 0.2s ease-in-out;
-    font-size: 0.9em;
 }
 
 .calculator-form input:focus {
     border-color: #333;
-    box-shadow: 0 4px 12px rgba(51, 51, 51, 0.2); /* Focus shadow adjusted */
+    box-shadow: 0 4px 12px rgba(51, 51, 51, 0.2);
     outline: none;
 }
 
@@ -62,15 +63,15 @@ p {
     border: none;
     cursor: pointer;
     font-size: 1.1em;
-    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2); /* Button shadow */
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+    transition: background-color 0.3s ease;
 }
 
 .calculate-btn:hover {
-    background-color: #007bff; /* Hover effect on button */
-    transform: scale(1.05); /* Slight animation on hover */
+    background-color: #007bff;
 }
 
+/* Result Display */
 .result-display {
     margin-top: 20px;
     padding: 15px;
@@ -79,21 +80,11 @@ p {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     font-size: 1.2em;
     color: #333;
-    animation: fadeIn 0.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
 
 .result-display p {
-    margin: 0; /* Remove default paragraph margin */
-    padding: 0; /* Ensure no padding inside the paragraph */
+    margin: 0;
+    padding: 0;
     line-height: 1.5;
 }
 
@@ -103,35 +94,65 @@ p {
 
 /* Spacer */
 .spacer {
-    height: 10px; /* Adds space after label */
+    height: 10px;
 }
 
+/* Signature Styling */
 .signature {
-    font-size: 0.9em;
-    color: #888888; 
+    font-size: 0.8em;
+    color: #888888;
     text-align: center;
-    margin-top: 20px; 
-    font-style: italic; 
+    margin-top: 20px;
+    font-style: italic;
 }
 
 .signature-link {
-    color: #888888; 
-    text-decoration: none; 
-    font-style: italic; 
+    color: #888888;
+    text-decoration: none;
+    font-style: italic;
 }
 
 .signature-link:hover {
-    color: #F86709; 
+    color: #F86709;
 }
 
-/* Input and Button Width */
-.calculator-form input,
-.calculate-btn {
-    width: 100%;
-}
+/* Mobile Responsiveness */
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 10px;
+        height: 100vh;  /* Ensure full height is used for centering */
+    }
 
-/* Accessibility and Focus States */
-.calculator-form input:focus,
-.calculate-btn:focus {
-    outline: none;
+    .calculator-container {
+        max-width: 100%;
+        padding: 20px;
+        margin: auto;  /* Center the container horizontally */
+    }
+
+    h1 {
+        font-size: 1.5em; 
+    }
+
+    p {
+        font-size: 1em;  
+    }
+
+    .calculator-form input {
+        font-size: 1em; 
+        padding: 10px;
+    }
+
+    .calculate-btn {
+        font-size: 1em;  
+        padding: 10px 15px;
+    }
+
+    .result-display {
+        font-size: 1em;
+        padding: 12px;
+    }
+
+    .signature {
+        font-size: 0.7em;
+    }
 }
