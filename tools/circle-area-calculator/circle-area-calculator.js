@@ -22,7 +22,7 @@ document.getElementById('circleForm').addEventListener('submit', function(event)
         const mantissa = (area / Math.pow(10, exponent)).toFixed(5);
         areaFormatted = `${mantissa} × 10<sup>${exponent}</sup>`; // Format in 10^x notation
     } else {
-        areaFormatted = area.toFixed(2); // Display up to 2 decimals for larger numbers
+        areaFormatted = area.toFixed(5); // Display up to 5 decimals for larger numbers
     }
 
     document.getElementById('result').innerHTML = `<p>The area of the circle is:<br><strong style="color: #F86709;">${areaFormatted} m²</strong></p>`;
